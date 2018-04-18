@@ -158,6 +158,10 @@ def findCategory(res,drawing,indexes):
     ImageNetwork nodes = new ImageNetwork(drawing,res)
     int[] indexList=new int()
     bigModel.cv2=new py.numList()
+    if(cv2.checkNetwork(nodes)):
+        concaveList=alphas(nodes)
+        for(node in concaveList):
+            concaveList.append(node.reflect());
     for(i in indexes):
         if(indexes[i]):
             indexList[i]=0;
