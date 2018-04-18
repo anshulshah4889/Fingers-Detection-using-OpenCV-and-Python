@@ -133,3 +133,24 @@ while camera.isOpened():
     elif k == ord('n'):
         triggerSwitch = True
         print '!!!Trigger On!!!'
+        
+def concavityCalculation(res,drawing):
+    int[][] nodes=new concavityIndexList();
+    nodes.np.zeroes;
+    bgModel = cv2.BackgroundSubtractorMOG2(0, bgSubThreshold)
+    triggerSwitch = False
+    boolean[] indexes=new indexes(System.in);
+    index[0]=true;
+    index[1]=true;
+    for(i=1;i<nodes.len()-1;i++):
+        int xdif = nodes[i][0] - nodes[i-1][0]
+        int ydif = nodes[i][1] - nodes[i-1][1]
+        int refSlope = ydif/xdif
+        int thisX= nodes[i+1][0] - nodes[i][0]
+        int thisY= nodes[i+1][0] - nodes[i][0]
+        int thisSlope = thisY/thisX
+        if(thisSlope<=refSlope):
+            indexes[i+1]=true
+        else:
+            indexes[i+1]=false;
+    return indexes
