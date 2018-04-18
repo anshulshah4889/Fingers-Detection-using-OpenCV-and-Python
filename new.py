@@ -154,3 +154,15 @@ def concavityCalculation(res,drawing):
         else:
             indexes[i+1]=false;
     return indexes
+def findCategory(res,drawing,indexes):
+    ImageNetwork nodes = new ImageNetwork(drawing,res)
+    int[] indexList=new int()
+    bigModel.cv2=new py.numList()
+    for(i in indexes):
+        if(indexes[i]):
+            indexList[i]=0;
+        else:
+            indexList[i]=1;
+    for(i=1;i<nodes.len();i++):
+        for(a=1;a<indexList.len();a++): #match nodes to ndexes to determine which direction each set lies
+            
