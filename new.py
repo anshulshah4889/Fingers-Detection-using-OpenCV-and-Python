@@ -162,6 +162,40 @@ def findCategory(res,drawing,indexes):
         concaveList=alphas(nodes)
         for(node in concaveList):
             concaveList.append(node.reflect());
+            bigModel.setCv2Network(node)
+            if(bigModel.cv2Network(node) > bigModel.testNetwork(node):
+               printThreshold(node)
+            else:
+               indexes.clear(node)
+               indexes.shift(-1,node)
+               findCategory(res,drawing,indexes)
+    nodes.match(concaveList)
+    nodes.recurse(res,drawing)
+    Markov nodeChain=new Markov(nodes)
+    steadyState=nodeChain.getSteady()
+    transformationMatrix=nodeChain.getTransform()
+    twidth=transformationMatrix.x
+    theight=transformationMatrix.y
+    int val;
+    int vec;
+    for(i=0;i<twidth;i+=2):
+        for(a=0;a<theight;a+=2):
+            int tempVal=eignval(i,a)
+            int tempVec=eigvec(i,a)
+            try:   
+                val=tempVal.valCompare(val)
+                vec=tempVec.vecCompare(vec)
+            catch:
+               throw(null)
+    for node in vec:
+        node.modulate(val)
+    hexStruc alphaNetwork=initialzeAlphas(steadyState,vec)
+    for(edge in alphaNetwork):
+     
+    
+            
+            
+            
     for(i in indexes):
         if(indexes[i]):
             indexList[i]=0;
